@@ -26,9 +26,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: 'JavaScript Mastery',
+          to_name: 'Harshavardhan Kurtkoti',
           from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
+          to_email: 'kurtkoti.harsha@gmail.com',
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
@@ -69,7 +69,7 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <h3 className="head-text">Get in Touch</h3>
+        <h3 className="head-text">Get in Touch</h3> <br />
         <p className="text-center mb-10" style={{ color: '#808080' }}>I would love to hear from you! Please fill out the form below to reach out.</p>
         <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
           <label className="space-y-3">
@@ -81,7 +81,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               className="field-input"
-              placeholder="ex., Harshavardhan Kurtkoti"
+              placeholder="ie: Harshavardhan Kurtkoti"
             />
           </label>
           <label className="space-y-3">
@@ -93,7 +93,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               className="field-input"
-              placeholder="ex., kurtkoti.harsha@gmail.com"
+              placeholder="ie: kurtkoti.harsha@gmail.com"
             />
           </label>
           <label className="space-y-3">
