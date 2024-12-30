@@ -81,7 +81,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               className="field-input"
-              placeholder="ex., John Doe"
+              placeholder="ex., Harshavardhan Kurtkoti"
             />
           </label>
           <label className="space-y-3">
@@ -93,7 +93,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               className="field-input"
-              placeholder="ex., johndoe@gmail.com"
+              placeholder="ex., kurtkoti.harsha@gmail.com"
             />
           </label>
           <label className="space-y-3">
@@ -105,7 +105,7 @@ const Contact = () => {
               required
               rows={5}
               className="field-input"
-              placeholder="Share your thoughts or inquiries..."
+              placeholder="Add your message here..."
             />
           </label>
           <button className="field-btn" type="submit" disabled={loading}>
