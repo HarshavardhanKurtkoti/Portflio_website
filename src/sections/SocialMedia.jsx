@@ -1,5 +1,3 @@
-import { clientReviews } from '../constants/index.js';
-
 const SocialMedia = () => {
   return (
     <section className="c-space my-20" id="social-media">

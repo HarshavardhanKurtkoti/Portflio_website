@@ -21,41 +21,6 @@ export const navLinks = [
   },
 ];
 
-export const clientReviews = [
-  {
-    id: 1,
-    name: 'Emily Johnson',
-    position: 'Marketing Director at GreenLeaf',
-    img: 'assets/review1.png',
-    review:
-      'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-  },
-  {
-    id: 2,
-    name: 'Mark Rogers',
-    position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
-    review:
-      'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-  },
-  {
-    id: 3,
-    name: 'John Dohsas',
-    position: 'Project Manager at UrbanTech ',
-    img: 'assets/review3.png',
-    review:
-      'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-  },
-  {
-    id: 4,
-    name: 'Ether Smith',
-    position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
-    review:
-      'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-  },
-];
-
 export const myProjects = [
   {
     title: 'Phishing Domain Detection App',
@@ -95,16 +60,16 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Automated Waste To Fertilizer Converter',
-    desc: 'This iot project with help of powerfull programming language like python and machine leaning has helped automate the provess of converting waste into fertilizer.',
+    title: 'Sentiment Analysis Chat App',
+    desc: 'A full-stack web application that allows users to analyze the sentiment of their messages in real time. Features user authentication, chat sessions, and an admin panel. Built with React, Node.js, and Express.',
     subdesc:
-      'This project has been a game changer in the agricultural sector, revolutionizing the way we manage waste and convert it into valuable fertilizer.',
-    texture: '/textures/project/project2.mp4',
-    logo: '/assets/project-logo2.png',
+      'Enables instant sentiment analysis with a modern UI, session management, and admin controls. Built for scalability and user experience.',
+    texture: '/textures/project/project2.mp4', // You can update this to a relevant demo video
+    logo: '/assets/project-logo2.png', // Update to your app logo if available
     logoStyle: {
-      backgroundColor: '#13202F',
-      border: '0.2px solid #17293E',
-      boxShadow: '0px 0px 60px 0px #2F6DB54D',
+      backgroundColor: '#23263a',
+      border: '0.2px solid #22c55e',
+      boxShadow: '0px 0px 60px 0px #22c55e4D',
     },
     spotlight: '/assets/spotlight2.png',
     tags: [
@@ -120,13 +85,13 @@ export const myProjects = [
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'Node.js',
+        path: '/assets/js.png',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Express',
+        path: '/assets/js.png',
       },
     ],
   },
