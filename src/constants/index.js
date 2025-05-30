@@ -26,7 +26,7 @@ export const myProjects = [
     title: 'Panda Sentiment Chat',
     desc: 'A modern, full-stack sentiment analysis chat application with user authentication, persistent chat history, real-time admin controls, and a beautiful UI inspired by ChatGPT and WhatsApp.',
     subdesc: 'Features real-time sentiment analysis, JWT authentication, persistent chat history, multi-session support, modern UI/UX, and an admin panel for user/chat management and stats.',
-    texture: '', // Add a relevant demo video or image if available
+    texture: '/textures/project/project2.mp4',
     logo: '/assets/pandachatbot.ico',
     logoStyle: {
       backgroundColor: '#23263a',
@@ -37,13 +37,13 @@ export const myProjects = [
     tags: [
       { id: 1, name: 'React', path: '/assets/react.svg' },
       { id: 2, name: 'TailwindCSS', path: '/assets/tailwindcss.png' },
-      { id: 3, name: 'Flask', path: '/assets/flask.png', logoStyle: { backgroundColor: '#f8f8f8' } },
+      { id: 3, name: 'Flask', path: '/assets/flask.png' },
       { id: 4, name: 'MongoDB', path: '/assets/MongoDB.png' },
       { id: 5, name: 'Docker', path: '/assets/Docker.png' },
-      { id: 6, name: 'JWT', path: '/assets/JWT.jpg' },
+      { id: 6, name: 'JWT', path: '/assets/JWT.svg' },
       { id: 7, name: 'TextBlob', path: '/assets/textblob.png' },
     ],
-    href: '', // Add a live link or demo if available
+    href: 'https://panda-chatbot-lxpt.vercel.app/',
   },
   {
     title: 'Phishing Domain Detection App',
@@ -62,25 +62,67 @@ export const myProjects = [
       {
         id: 1,
         name: 'HTML5',
-        path: '/assets/html.png',
+        path: '/assets/html.svg',
 
       },
       {
         id: 2,
         name: 'CSS3',
-        path: '/assets/css.png',
+        path: '/assets/css.svg',
       },
       {
         id: 3,
         name: 'JavaScript',
-        path: '/assets/js.png',
+        path: '/assets/js.svg',
       },
       {
         id: 4,
         name: 'Scikit Learn',
-        path: '/assets/sklearn.png',
+        path: '/assets/sklearn.svg',
       },
     ],
+  },
+  {
+    title: 'Water Potability Prediction with MLOps',
+    desc: 'An end-to-end machine learning project predicting water potability using FastAPI backend and React + Vite frontend, incorporating MLOps best practices.',
+    subdesc: 'Features include data processing, model training, deployment workflows, and a user-friendly UI for real-time predictions.',
+    texture: '/textures/project/project3.mp4',
+    logo: '/assets/project-logo3.png',
+    logoStyle: {
+      backgroundColor: '#1E293B',
+      border: '0.2px solid #2563EB',
+      boxShadow: '0px 0px 60px 0px #2563EB4D',
+    },
+    spotlight: '/assets/spotlight3.png',
+    tags: [
+      { id: 1, name: 'Python', path: '/assets/python.png' },
+      { id: 2, name: 'FastAPI', path: '/assets/FastAPI.png' },
+      { id: 3, name: 'React', path: '/assets/react.svg' },
+      { id: 4, name: 'Docker', path: '/assets/Docker.png' },
+      { id: 5, name: 'DVC', path: '/assets/dagshab.svg' },
+    ],
+    href: 'https://water-portability-front-end.vercel.app/',
+  },
+  {
+    title: 'Machine Learning Streamlit App',
+    desc: 'A Streamlit-based machine learning app that predicts penguin species using a Random Forest classifier. The app provides an interactive interface for users to input data and visualize predictions. It is designed to be user-friendly and educational, making it suitable for both beginners and experts in machine learning.',
+    subdesc: 'Features include user input for real-time predictions, detailed data visualization, model inference using a trained Random Forest classifier, and dynamic updates to ensure accurate results. The app also includes a tutorial section to help users understand the underlying machine learning concepts.',
+    texture: '/textures/project/project4.mp4',
+    logo: '/assets/project-logo4.png',
+    logoStyle: {
+      backgroundColor: '#1E293B',
+      border: '0.2px solid #10B981',
+      boxShadow: '0px 0px 60px 0px #10B9814D',
+    },
+    spotlight: '/assets/spotlight4.png',
+    tags: [
+      { id: 1, name: 'Streamlit', path: '/assets/st.png' },
+      { id: 2, name: 'Pandas', path: '/assets/pandas.svg' },
+      { id: 3, name: 'NumPy', path: '/assets/numpy.svg' },
+      { id: 4, name: 'Scikit-learn', path: '/assets/sklearn.svg' },
+      { id: 5, name: 'pytest', path: '/assets/pytest.svg' },
+    ],
+    href: 'https://penguin-species-prediction-harsha.streamlit.app/',
   },
 ];
 

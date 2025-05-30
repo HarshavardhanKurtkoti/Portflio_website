@@ -29,6 +29,8 @@ const Projects = () => {
 
   const currentProject = myProjects[selectedProjectIndex];
 
+  console.log('Current Project:', currentProject); // Debugging line
+
   return (
     <section className="c-space my-20">
       <p className="head-text">My Selected Work</p>
@@ -53,19 +55,40 @@ const Projects = () => {
           <div className="flex items-center justify-between flex-wrap gap-5">
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
-                <div key={index} className="tech-logo" style={tag.logoStyle || {}}>
+                <div
+                  key={index}
+                  className="tech-logo relative group"
+                  style={tag.logoStyle || {}}>
                   <img src={tag.path} alt={tag.name} />
+                  <div
+                    className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-black-300 text-white text-sm rounded-lg shadow-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="font-semibold">{tag.name}</p>
+                    {tag.href && (
+                      <a
+                        href={tag.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 underline">
+                        Learn More
+                      </a>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
 
             <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
+              className="flex items-center gap-2 cursor-pointer text-white-600 group"
               href={currentProject.href}
               target="_blank"
-              rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+              rel="noreferrer"
+            >
+              <p className="group-hover:text-blue-400 transition-colors duration-300">Check Live Site</p>
+              <img
+                src="/assets/arrow-up.png"
+                alt="arrow"
+                className="w-3 h-3 group-hover:scale-110 transition-transform duration-300"
+              />
             </a>
           </div>
 
