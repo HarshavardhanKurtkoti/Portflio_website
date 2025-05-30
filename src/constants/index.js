@@ -108,7 +108,7 @@ export const myProjects = [
     desc: 'A Streamlit-based machine learning app that predicts penguin species using a Random Forest classifier. The app provides an interactive interface for users to input data and visualize predictions. It is designed to be user-friendly and educational, making it suitable for both beginners and experts in machine learning.',
     subdesc: 'Features include user input for real-time predictions, detailed data visualization, model inference using a trained Random Forest classifier, and dynamic updates to ensure accurate results. The app also includes a tutorial section to help users understand the underlying machine learning concepts.',
     texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
+    logo: '/assets/penguin.jpg',
     logoStyle: {
       backgroundColor: '#1E293B',
       border: '0.2px solid #10B981',
