@@ -65,15 +65,15 @@ const Contact = () => {
   };
 
   return (
-    <section className="c-space my-28" id="contact">
+    <section className="c-space my-10" id="contact">
       {alert.show && <Alert {...alert} />}
 
-      <div className="glass-panel relative max-w-3xl mx-auto px-5 py-12 sm:p-12 flex items-center justify-center flex-col">
+      <div className="glass-panel relative max-w-3xl mx-auto px-5 py-6 sm:p-6 flex items-center justify-center flex-col">
         <p className="section-kicker">Contact</p>
-        <h3 className="head-text mt-2">Lets build something useful</h3>
-        <p className="text-center mb-10" style={{ color: '#808080' }}>I would love to hear from you! Please fill out the form below to reach out.</p>
-        <form ref={formRef} onSubmit={handleSubmit} className="mt-10 flex flex-col space-y-7 w-full max-w-xl">
-          <label className="space-y-3">
+        <h3 className="head-text mt-1">Lets build something useful</h3>
+        <p className="text-center mb-4" style={{ color: '#808080' }}>I would love to hear from you! Please fill out the form below to reach out.</p>
+        <form ref={formRef} onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4 w-full max-w-xl">
+          <label className="flex flex-col gap-1">
             <span className="field-label">Full Name</span>
             <input
               type="text"
@@ -85,7 +85,7 @@ const Contact = () => {
               placeholder="ie: Harshavardhan Kurtkoti"
             />
           </label>
-          <label className="space-y-3">
+          <label className="flex flex-col gap-1">
             <span className="field-label">Email address</span>
             <input
               type="email"
@@ -97,14 +97,14 @@ const Contact = () => {
               placeholder="ie: kurtkoti.harsha@gmail.com"
             />
           </label>
-          <label className="space-y-3">
+          <label className="flex flex-col gap-1">
             <span className="field-label">Your message</span>
             <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
               required
-              rows={5}
+              rows={3}
               className="field-input"
               placeholder="Add your message here..."
             />

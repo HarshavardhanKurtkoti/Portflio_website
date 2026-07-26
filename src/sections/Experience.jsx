@@ -25,25 +25,23 @@ const WorkExperience = () => {
               <directionalLight position={[4, 7, 6]} intensity={2.2} />
               <pointLight position={[-4, 2, 3]} color="#60a5fa" intensity={12} />
               <Suspense fallback={<CanvasLoader />}>
-                <Developer position={[0, -3.6, 0]} scale={3} animationName={animationName} />
+                <Developer position={[-0.2, -3.2, 0]} scale={2.7} animationName={animationName} />
               </Suspense>
               <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.7} maxPolarAngle={Math.PI / 2.1} />
             </Canvas>
           </div>
 
           <div className="work-content">
-            <div className="sm:py-10 py-5 sm:px-5 px-2.5">
+            <div className="sm:py-10 py-5 sm:px-5 px-2.5 max-h-[500px] overflow-y-auto custom-scrollbar" onPointerLeave={() => setAnimationName('idle')}>
               {workExperiences.map((item, index) => (
                 <div
                   key={index}
                   onPointerEnter={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerLeave={() => setAnimationName('idle')}
-                  onFocus={() => setAnimationName(item.animation.toLowerCase())}
-                  onBlur={() => setAnimationName('idle')}
+                  onClick={() => setAnimationName(item.animation.toLowerCase())}
                   className="work-content_container group">
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className="work-content_logo">
-                      <img className="w-full h-full" src={item.icon} alt="" />
+                      <img className="w-full h-full object-contain" src={item.icon} alt="" />
                     </div>
 
                     <div className="work-content_bar" />

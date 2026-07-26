@@ -144,8 +144,8 @@ export const workExperiences = [
     pos: 'Full Stack AI Intern',
     duration: 'December 2025 - Present',
     title: 'Architecting AI-driven campaign and workflow services with FastAPI, PostgreSQL, Redis Streams, LangChain, OpenAI, and Gemini. Built real-time dashboards, remote Windows-server automation, monitoring, diagnostics, and automated recovery pipelines.',
-    icon: '/assets/terminal.png',
-    animation: 'idle',
+    icon: '/assets/ton.png',
+    animation: 'victory',
   },
   {
     id: 2,
