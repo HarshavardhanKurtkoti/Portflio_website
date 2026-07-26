@@ -23,13 +23,18 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-24 c-space gap-4 z-10 pointer-events-none">
-        <p className="section-kicker text-center">Full Stack AI & Backend Engineer</p>
-        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
+      <div 
+        className="w-full mx-auto flex flex-col sm:mt-36 mt-24 c-space gap-4 z-10 pointer-events-none pb-12 drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]"
+        style={{
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 70%)'
+        }}
+      >
+        <p className="section-kicker text-center drop-shadow-[0_0_10px_rgba(0,0,0,1)]">Full Stack AI & Backend Engineer</p>
+        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans drop-shadow-[0_0_15px_rgba(0,0,0,1)]">
           Hi, I am Harshavardhan
         </p>
-        <h1 className="hero_tag text-gray_gradient">Reliable systems, intelligent workflows, real impact.</h1>
-        <p className="max-w-2xl mx-auto text-center text-white-500 sm:text-lg">I build AI-powered workflow platforms and production backend infrastructure with Python, FastAPI, React, Redis, and PostgreSQL.</p>
+        <h1 className="hero_tag text-gray_gradient drop-shadow-[0_0_20px_rgba(0,0,0,1)]">Reliable systems, intelligent workflows, real impact.</h1>
+        <p className="max-w-2xl mx-auto text-center text-white-500 sm:text-lg drop-shadow-[0_0_10px_rgba(0,0,0,1)]">I build AI-powered workflow platforms and production backend infrastructure with Python, FastAPI, React, Redis, and PostgreSQL.</p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
@@ -56,7 +61,32 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
+        <a href="#contact" className="w-fit" onClick={(e) => {
+          e.preventDefault();
+          const section = document.querySelector('#contact');
+          if (section) {
+            const targetPosition = section.getBoundingClientRect().top + window.scrollY - 120;
+            const startPosition = window.scrollY;
+            const distance = targetPosition - startPosition;
+            const duration = 800;
+            let start = null;
+
+            const ease = (t, b, c, d) => {
+              t /= d / 2;
+              if (t < 1) return (c / 2) * t * t + b;
+              t--;
+              return (-c / 2) * (t * (t - 2) - 1) + b;
+            };
+
+            const step = (timestamp) => {
+              if (!start) start = timestamp;
+              const progress = timestamp - start;
+              window.scrollTo(0, ease(progress, startPosition, distance, duration));
+              if (progress < duration) window.requestAnimationFrame(step);
+            };
+            window.requestAnimationFrame(step);
+          }
+        }}>
           <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
         </a>
       </div>
