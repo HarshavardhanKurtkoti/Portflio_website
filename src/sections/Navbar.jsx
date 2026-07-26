@@ -21,11 +21,11 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.07] bg-[#07080c]/75 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center py-5 mx-auto c-space">
-          <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
-            Harshavardhan
+        <div className="flex justify-between items-center py-4 mx-auto c-space">
+          <a href="#home" className="font-bold text-lg tracking-tight text-white hover:text-blue-300 transition-colors">
+            Harsha<span className="text-blue-400">.</span>
           </a>
 
           <button

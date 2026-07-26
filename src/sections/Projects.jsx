@@ -32,11 +32,12 @@ const Projects = () => {
   console.log('Current Project:', currentProject); // Debugging line
 
   return (
-    <section className="c-space my-20">
-      <p className="head-text">My Selected Work</p>
+    <section className="c-space my-28" id="projects">
+      <p className="section-kicker">Portfolio</p>
+      <p className="head-text mt-2">Selected work</p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+        <div className="glass-panel flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 overflow-hidden">
           <div className="absolute top-0 right-0">
             <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
           </div>
@@ -103,7 +104,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+        <div className="border border-white/10 bg-[#11131b] rounded-2xl h-96 md:h-full overflow-hidden">
           <Canvas>
             <ambientLight intensity={Math.PI} />
             <directionalLight position={[10, 10, 5]} />

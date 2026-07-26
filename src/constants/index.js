@@ -138,15 +138,14 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 };
 
 export const workExperiences = [
-  
   {
     id: 1,
-    name: 'Ahlbyte Fintech Pvt Ltd',
-    pos: 'Data Science Intern',
-    duration: 'November 2024 - present',
-    title: "Currently working on data analysis and modeling projects to enhance business decision-making processes. Engaged in applying machine learning techniques to derive actionable insights from complex datasets.",
-    icon: '/assets/pantech.jpg',
-    animation: 'clapping',
+    name: 'Ton Technology Services',
+    pos: 'Full Stack AI Intern',
+    duration: 'December 2025 - Present',
+    title: 'Architecting AI-driven campaign and workflow services with FastAPI, PostgreSQL, Redis Streams, LangChain, OpenAI, and Gemini. Built real-time dashboards, remote Windows-server automation, monitoring, diagnostics, and automated recovery pipelines.',
+    icon: '/assets/terminal.png',
+    animation: 'idle',
   },
   {
     id: 2,

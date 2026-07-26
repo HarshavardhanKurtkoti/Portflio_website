@@ -15,16 +15,19 @@ const WorkExperience = () => {
         <p className="head-text">My Work Experience</p>
 
         <div className="work-container">
-          <div className="work-canvas">
-            <Canvas>
-              <ambientLight intensity={7} />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-              <directionalLight position={[10, 10, 10]} intensity={1} />
-              <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-
+          <div className="work-canvas relative min-h-[420px] overflow-hidden">
+            <div className="absolute inset-x-0 top-0 z-10 p-6 pointer-events-none bg-gradient-to-b from-[#11131b] via-[#11131b]/70 to-transparent">
+              <p className="section-kicker">Interactive timeline</p>
+              <p className="text-sm text-white-500 mt-2">Hover an experience to bring the developer to life.</p>
+            </div>
+            <Canvas camera={{ position: [0, 0.25, 10], fov: 38 }}>
+              <ambientLight intensity={2.4} />
+              <directionalLight position={[4, 7, 6]} intensity={2.2} />
+              <pointLight position={[-4, 2, 3]} color="#60a5fa" intensity={12} />
               <Suspense fallback={<CanvasLoader />}>
-                <Developer position-y={-3} scale={3} animationName={animationName} />
+                <Developer position={[0, -3.6, 0]} scale={3} animationName={animationName} />
               </Suspense>
+              <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.7} maxPolarAngle={Math.PI / 2.1} />
             </Canvas>
           </div>
 
@@ -33,9 +36,10 @@ const WorkExperience = () => {
               {workExperiences.map((item, index) => (
                 <div
                   key={index}
-                  onClick={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOut={() => setAnimationName('idle')}
+                  onPointerEnter={() => setAnimationName(item.animation.toLowerCase())}
+                  onPointerLeave={() => setAnimationName('idle')}
+                  onFocus={() => setAnimationName(item.animation.toLowerCase())}
+                  onBlur={() => setAnimationName('idle')}
                   className="work-content_container group">
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className="work-content_logo">

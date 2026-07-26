@@ -38,7 +38,7 @@ const Contact = () => {
           setLoading(false);
           showAlert({
             show: true,
-            text: 'Thank you for your message 😃',
+            text: 'Thank you for your message ðŸ˜ƒ',
             type: 'success',
           });
 
@@ -57,7 +57,7 @@ const Contact = () => {
 
           showAlert({
             show: true,
-            text: "I didn't receive your message 😢",
+            text: "I didn't receive your message ðŸ˜¢",
             type: 'danger',
           });
         },
@@ -65,13 +65,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="c-space my-20" id="contact">
+    <section className="c-space my-28" id="contact">
       {alert.show && <Alert {...alert} />}
 
-      <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <h3 className="head-text">Get in Touch</h3> <br />
+      <div className="glass-panel relative max-w-3xl mx-auto px-5 py-12 sm:p-12 flex items-center justify-center flex-col">
+        <p className="section-kicker">Contact</p>
+        <h3 className="head-text mt-2">Lets build something useful</h3>
         <p className="text-center mb-10" style={{ color: '#808080' }}>I would love to hear from you! Please fill out the form below to reach out.</p>
-        <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
+        <form ref={formRef} onSubmit={handleSubmit} className="mt-10 flex flex-col space-y-7 w-full max-w-xl">
           <label className="space-y-3">
             <span className="field-label">Full Name</span>
             <input
